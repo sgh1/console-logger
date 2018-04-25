@@ -1,6 +1,6 @@
 
-#ifndef BLOCK_MATRIX_ERR_H
-#define BLOCK_MATRIX_ERR_H
+#ifndef CONSOLE_LOGGER_H
+#define CONSOLE_LOGGER_H
 
 #include <mutex>
 #include <memory>
