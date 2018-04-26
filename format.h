@@ -1,7 +1,7 @@
 
 
-#ifndef DEVLIB_FORMAT_H
-#define DEVLIB_FORMAT_H
+#ifndef LOGGER_FORMAT_H
+#define LOGGER_FORMAT_H
 
 #include <sstream>
 #include <string>
@@ -14,14 +14,12 @@ class format
 public:
     	
     template <class... Ts>
-    format(const Ts&... ts)
-    {
+    format(const Ts&... ts) {
         assemble(ts...);
     }
 
-    // .
-    std::string str() const
-    {
+    // Get string.
+    std::string str() const{
         return ss_.str();
     }
 
@@ -29,8 +27,7 @@ private:
 
     // Base case for assembly.
     template <class T> 
-    void assemble(const T& head)
-    {
+    void assemble(const T& head){
         ss_ << head;
     }
 
@@ -45,10 +42,7 @@ private:
      
     // The stringstream used to assemble the string.   
     std::stringstream ss_;
-
 };
-
-
 }
 
 #endif
